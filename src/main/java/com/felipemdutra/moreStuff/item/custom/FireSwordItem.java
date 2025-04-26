@@ -8,7 +8,7 @@ public class FireSwordItem extends CustomSwordItem {
     private static final float FIRE_DURATION_SECS = 5.0f;
 
     public FireSwordItem(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
-        super(material, attackDamage, attackSpeed, settings);
+        super(material, attackDamage, attackSpeed, settings.fireproof());
     }
 
     @Override
