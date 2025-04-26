@@ -13,9 +13,9 @@ public class FireSwordItem extends CustomSwordItem {
 
     @Override
     public void postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        super.postHit(stack, target, attacker);
-
         // apply fire effect for 6 seconds
         target.setOnFireFor(FIRE_DURATION_SECS);
+
+        super.postHit(stack, target, attacker);
     }
 }
