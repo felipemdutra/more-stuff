@@ -11,8 +11,6 @@ import net.minecraft.util.Identifier;
 import java.util.function.Function;
 
 public class ModItems {
-    public static final Item TEST_ITEM;
-
     @SuppressWarnings("unchecked")
     private static <T extends Item> RegistryKey<T> keyOf(String id) {
         return (RegistryKey<T>) RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MoreStuff.ID, id));
@@ -30,9 +28,5 @@ public class ModItems {
 
     public static void initialize() {
         MoreStuff.LOGGER.info("ModItems initialized!");
-    }
-
-    static {
-        TEST_ITEM = register("test_item", Item::new, new Item.Settings());
     }
 }
