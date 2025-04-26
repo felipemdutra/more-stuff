@@ -5,7 +5,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 
 public class FireSwordItem extends CustomSwordItem {
-    private static final float fireDurationSecs = 5.0f;
+    private static final float FIRE_DURATION_SECS = 5.0f;
 
     public FireSwordItem(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);
@@ -16,6 +16,6 @@ public class FireSwordItem extends CustomSwordItem {
         super.postHit(stack, target, attacker);
 
         // apply fire effect for 6 seconds
-        target.setOnFireFor(fireDurationSecs);
+        target.setOnFireFor(FIRE_DURATION_SECS);
     }
 }
